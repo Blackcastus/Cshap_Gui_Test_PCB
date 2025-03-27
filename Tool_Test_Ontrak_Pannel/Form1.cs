@@ -36,7 +36,7 @@ namespace Tool_Test_Ontrak_Pannel
             string[] sBaudrate = { "2400", "4800", "9600", "14400", "19200", "38400", "57600", "115200", "128000" };
             cboBaud.Items.AddRange(sBaudrate);
 
-            cboCom.Text = "COM4";
+            //cboCom.Text = "COM4";
 
             Timer timer = new Timer();
             timer.Interval = 100;
@@ -182,6 +182,5 @@ namespace Tool_Test_Ontrak_Pannel
                 lbBaseCurrent.BackColor = Color.Red;
             }
         }
-
     }
 }
