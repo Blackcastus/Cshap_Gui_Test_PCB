@@ -102,8 +102,11 @@ namespace Tool_Test_Ontrak_Pannel
             this.lbEtagCurrRun = new System.Windows.Forms.Label();
             this.lbEtagCurSleep = new System.Windows.Forms.Label();
             this.lbEtag3 = new System.Windows.Forms.Label();
-            this.tbDebug = new System.Windows.Forms.TextBox();
+            this.btStartOsc = new System.Windows.Forms.Button();
+            this.btStopOsc = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tboFreq = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -121,20 +124,18 @@ namespace Tool_Test_Ontrak_Pannel
             // cboCom
             // 
             this.cboCom.FormattingEnabled = true;
-            this.cboCom.Location = new System.Drawing.Point(184, 4);
-            this.cboCom.Margin = new System.Windows.Forms.Padding(4);
+            this.cboCom.Location = new System.Drawing.Point(138, 3);
             this.cboCom.Name = "cboCom";
-            this.cboCom.Size = new System.Drawing.Size(160, 24);
+            this.cboCom.Size = new System.Drawing.Size(121, 21);
             this.cboCom.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 29);
+            this.label1.Size = new System.Drawing.Size(41, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Port:";
             // 
@@ -142,20 +143,18 @@ namespace Tool_Test_Ontrak_Pannel
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 46);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(3, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 29);
+            this.label2.Size = new System.Drawing.Size(76, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "Baudrate:";
             // 
             // cboBaud
             // 
             this.cboBaud.FormattingEnabled = true;
-            this.cboBaud.Location = new System.Drawing.Point(184, 50);
-            this.cboBaud.Margin = new System.Windows.Forms.Padding(4);
+            this.cboBaud.Location = new System.Drawing.Point(138, 40);
             this.cboBaud.Name = "cboBaud";
-            this.cboBaud.Size = new System.Drawing.Size(160, 24);
+            this.cboBaud.Size = new System.Drawing.Size(121, 21);
             this.cboBaud.TabIndex = 3;
             // 
             // groupBox1
@@ -163,11 +162,9 @@ namespace Tool_Test_Ontrak_Pannel
             this.groupBox1.Controls.Add(this.tableLayoutPanel4);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(16, 299);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(386, 74);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(377, 139);
+            this.groupBox1.Size = new System.Drawing.Size(283, 113);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Serial Port Options";
@@ -181,22 +178,19 @@ namespace Tool_Test_Ontrak_Pannel
             this.tableLayoutPanel4.Controls.Add(this.cboCom, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.cboBaud, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(8, 28);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(6, 23);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(361, 92);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(271, 75);
             this.tableLayoutPanel4.TabIndex = 6;
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(385, 10);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(289, 8);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(665, 142);
+            this.groupBox2.Size = new System.Drawing.Size(499, 115);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
@@ -205,11 +199,9 @@ namespace Tool_Test_Ontrak_Pannel
             // 
             this.groupBox3.Controls.Add(this.tableLayoutPanel5);
             this.groupBox3.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(16, 446);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Location = new System.Drawing.Point(780, 69);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(377, 145);
+            this.groupBox3.Size = new System.Drawing.Size(283, 118);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Status";
@@ -224,23 +216,21 @@ namespace Tool_Test_Ontrak_Pannel
             this.tableLayoutPanel5.Controls.Add(this.btRefresh, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.lbComStatus, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.label3, 1, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(8, 23);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(6, 19);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(361, 113);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(271, 92);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // btConnect
             // 
             this.btConnect.Font = new System.Drawing.Font("Arial Narrow", 10F);
-            this.btConnect.Location = new System.Drawing.Point(4, 4);
-            this.btConnect.Margin = new System.Windows.Forms.Padding(4);
+            this.btConnect.Location = new System.Drawing.Point(3, 3);
             this.btConnect.Name = "btConnect";
-            this.btConnect.Size = new System.Drawing.Size(100, 30);
+            this.btConnect.Size = new System.Drawing.Size(75, 24);
             this.btConnect.TabIndex = 6;
             this.btConnect.Text = "Connect";
             this.btConnect.UseVisualStyleBackColor = true;
@@ -249,10 +239,9 @@ namespace Tool_Test_Ontrak_Pannel
             // btDisconnect
             // 
             this.btDisconnect.Font = new System.Drawing.Font("Arial Narrow", 10F);
-            this.btDisconnect.Location = new System.Drawing.Point(4, 42);
-            this.btDisconnect.Margin = new System.Windows.Forms.Padding(4);
+            this.btDisconnect.Location = new System.Drawing.Point(3, 34);
             this.btDisconnect.Name = "btDisconnect";
-            this.btDisconnect.Size = new System.Drawing.Size(100, 30);
+            this.btDisconnect.Size = new System.Drawing.Size(75, 24);
             this.btDisconnect.TabIndex = 7;
             this.btDisconnect.Text = "Disconnect";
             this.btDisconnect.UseVisualStyleBackColor = true;
@@ -261,10 +250,9 @@ namespace Tool_Test_Ontrak_Pannel
             // btRefresh
             // 
             this.btRefresh.Font = new System.Drawing.Font("Arial Narrow", 10F);
-            this.btRefresh.Location = new System.Drawing.Point(4, 80);
-            this.btRefresh.Margin = new System.Windows.Forms.Padding(4);
+            this.btRefresh.Location = new System.Drawing.Point(3, 65);
             this.btRefresh.Name = "btRefresh";
-            this.btRefresh.Size = new System.Drawing.Size(100, 29);
+            this.btRefresh.Size = new System.Drawing.Size(75, 24);
             this.btRefresh.TabIndex = 9;
             this.btRefresh.Text = "Refresh";
             this.btRefresh.UseVisualStyleBackColor = true;
@@ -275,11 +263,11 @@ namespace Tool_Test_Ontrak_Pannel
             this.lbComStatus.AutoSize = true;
             this.lbComStatus.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbComStatus.ForeColor = System.Drawing.Color.Red;
-            this.lbComStatus.Location = new System.Drawing.Point(184, 44);
-            this.lbComStatus.Margin = new System.Windows.Forms.Padding(4, 6, 4, 0);
+            this.lbComStatus.Location = new System.Drawing.Point(138, 36);
+            this.lbComStatus.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.lbComStatus.Name = "lbComStatus";
-            this.lbComStatus.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.lbComStatus.Size = new System.Drawing.Size(136, 24);
+            this.lbComStatus.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.lbComStatus.Size = new System.Drawing.Size(108, 20);
             this.lbComStatus.TabIndex = 8;
             this.lbComStatus.Text = "Disconnected";
             // 
@@ -288,10 +276,10 @@ namespace Tool_Test_Ontrak_Pannel
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(184, 6);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 0);
+            this.label3.Location = new System.Drawing.Point(138, 5);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 24);
+            this.label3.Size = new System.Drawing.Size(123, 20);
             this.label3.TabIndex = 10;
             this.label3.Text = "Connection Status";
             // 
@@ -299,10 +287,9 @@ namespace Tool_Test_Ontrak_Pannel
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(608, 22);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(456, 18);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(501, 52);
+            this.label4.Size = new System.Drawing.Size(397, 39);
             this.label4.TabIndex = 1;
             this.label4.Text = "ONTRAK TEST PANEL";
             // 
@@ -310,10 +297,9 @@ namespace Tool_Test_Ontrak_Pannel
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox1.Image = global::Tool_Test_Ontrak_Pannel.Properties.Resources.Logo_Ontrak_140_80;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 101);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(23, 32);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(377, 180);
+            this.pictureBox1.Size = new System.Drawing.Size(197, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -325,11 +311,9 @@ namespace Tool_Test_Ontrak_Pannel
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.tableLayoutPanel1);
-            this.groupBox6.Location = new System.Drawing.Point(1023, 92);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox6.Location = new System.Drawing.Point(6, 203);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Size = new System.Drawing.Size(601, 322);
+            this.groupBox6.Size = new System.Drawing.Size(451, 262);
             this.groupBox6.TabIndex = 8;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "BASE-03";
@@ -359,8 +343,7 @@ namespace Tool_Test_Ontrak_Pannel
             this.tableLayoutPanel1.Controls.Add(this.label24, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.tboBaseCur, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.tboBase2, 1, 5);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 34);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 28);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -369,7 +352,7 @@ namespace Tool_Test_Ontrak_Pannel
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(585, 278);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(439, 226);
             this.tableLayoutPanel1.TabIndex = 12;
             // 
             // label20
@@ -377,10 +360,9 @@ namespace Tool_Test_Ontrak_Pannel
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label20.Location = new System.Drawing.Point(296, 1);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Location = new System.Drawing.Point(222, 1);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(72, 23);
+            this.label20.Size = new System.Drawing.Size(60, 18);
             this.label20.TabIndex = 20;
             this.label20.Text = "VALUE";
             // 
@@ -389,10 +371,9 @@ namespace Tool_Test_Ontrak_Pannel
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label22.Location = new System.Drawing.Point(5, 1);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Location = new System.Drawing.Point(4, 1);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(126, 23);
+            this.label22.Size = new System.Drawing.Size(98, 18);
             this.label22.TabIndex = 19;
             this.label22.Text = "TEST POINT";
             // 
@@ -402,11 +383,11 @@ namespace Tool_Test_Ontrak_Pannel
             this.lbBase2.BackColor = System.Drawing.Color.Red;
             this.lbBase2.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBase2.ForeColor = System.Drawing.Color.Black;
-            this.lbBase2.Location = new System.Drawing.Point(453, 235);
-            this.lbBase2.Margin = new System.Windows.Forms.Padding(7, 4, 7, 0);
+            this.lbBase2.Location = new System.Drawing.Point(340, 189);
+            this.lbBase2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbBase2.Name = "lbBase2";
-            this.lbBase2.Padding = new System.Windows.Forms.Padding(20, 2, 20, 2);
-            this.lbBase2.Size = new System.Drawing.Size(121, 36);
+            this.lbBase2.Padding = new System.Windows.Forms.Padding(15, 2, 15, 2);
+            this.lbBase2.Size = new System.Drawing.Size(73, 23);
             this.lbBase2.TabIndex = 24;
             this.lbBase2.Text = "FAIL";
             // 
@@ -416,11 +397,11 @@ namespace Tool_Test_Ontrak_Pannel
             this.lbBase384.BackColor = System.Drawing.Color.Red;
             this.lbBase384.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBase384.ForeColor = System.Drawing.Color.Black;
-            this.lbBase384.Location = new System.Drawing.Point(453, 189);
-            this.lbBase384.Margin = new System.Windows.Forms.Padding(7, 4, 7, 0);
+            this.lbBase384.Location = new System.Drawing.Point(340, 152);
+            this.lbBase384.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbBase384.Name = "lbBase384";
-            this.lbBase384.Padding = new System.Windows.Forms.Padding(20, 2, 20, 2);
-            this.lbBase384.Size = new System.Drawing.Size(121, 36);
+            this.lbBase384.Padding = new System.Windows.Forms.Padding(15, 2, 15, 2);
+            this.lbBase384.Size = new System.Drawing.Size(73, 23);
             this.lbBase384.TabIndex = 23;
             this.lbBase384.Text = "FAIL";
             // 
@@ -428,10 +409,10 @@ namespace Tool_Test_Ontrak_Pannel
             // 
             this.tboBase384.BackColor = System.Drawing.Color.Gainsboro;
             this.tboBase384.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboBase384.Location = new System.Drawing.Point(299, 187);
-            this.tboBase384.Margin = new System.Windows.Forms.Padding(7, 2, 7, 0);
+            this.tboBase384.Location = new System.Drawing.Point(224, 151);
+            this.tboBase384.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboBase384.Name = "tboBase384";
-            this.tboBase384.Size = new System.Drawing.Size(131, 35);
+            this.tboBase384.Size = new System.Drawing.Size(99, 29);
             this.tboBase384.TabIndex = 21;
             // 
             // label21
@@ -439,10 +420,9 @@ namespace Tool_Test_Ontrak_Pannel
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label21.Location = new System.Drawing.Point(450, 1);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(338, 1);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(108, 23);
+            this.label21.Size = new System.Drawing.Size(87, 18);
             this.label21.TabIndex = 18;
             this.label21.Text = "PASS/FAIL";
             // 
@@ -450,10 +430,10 @@ namespace Tool_Test_Ontrak_Pannel
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1, 139);
+            this.label7.Location = new System.Drawing.Point(1, 112);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 24);
+            this.label7.Size = new System.Drawing.Size(100, 19);
             this.label7.TabIndex = 5;
             this.label7.Text = "Current  mA";
             // 
@@ -461,10 +441,10 @@ namespace Tool_Test_Ontrak_Pannel
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1, 93);
+            this.label6.Location = new System.Drawing.Point(1, 75);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 24);
+            this.label6.Size = new System.Drawing.Size(78, 19);
             this.label6.TabIndex = 3;
             this.label6.Text = "Volt 5    V";
             // 
@@ -473,10 +453,10 @@ namespace Tool_Test_Ontrak_Pannel
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label5.Location = new System.Drawing.Point(1, 47);
+            this.label5.Location = new System.Drawing.Point(1, 38);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 24);
+            this.label5.Size = new System.Drawing.Size(79, 19);
             this.label5.TabIndex = 1;
             this.label5.Text = "Volt 3.3 V";
             // 
@@ -484,20 +464,20 @@ namespace Tool_Test_Ontrak_Pannel
             // 
             this.tboBase5.BackColor = System.Drawing.Color.Gainsboro;
             this.tboBase5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboBase5.Location = new System.Drawing.Point(299, 95);
-            this.tboBase5.Margin = new System.Windows.Forms.Padding(7, 2, 7, 0);
+            this.tboBase5.Location = new System.Drawing.Point(224, 77);
+            this.tboBase5.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboBase5.Name = "tboBase5";
-            this.tboBase5.Size = new System.Drawing.Size(131, 35);
+            this.tboBase5.Size = new System.Drawing.Size(99, 29);
             this.tboBase5.TabIndex = 2;
             // 
             // tboBase3
             // 
             this.tboBase3.BackColor = System.Drawing.Color.Gainsboro;
             this.tboBase3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboBase3.Location = new System.Drawing.Point(299, 49);
-            this.tboBase3.Margin = new System.Windows.Forms.Padding(7, 2, 7, 0);
+            this.tboBase3.Location = new System.Drawing.Point(224, 40);
+            this.tboBase3.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboBase3.Name = "tboBase3";
-            this.tboBase3.Size = new System.Drawing.Size(131, 35);
+            this.tboBase3.Size = new System.Drawing.Size(99, 29);
             this.tboBase3.TabIndex = 0;
             // 
             // lbBaseCur
@@ -506,11 +486,11 @@ namespace Tool_Test_Ontrak_Pannel
             this.lbBaseCur.BackColor = System.Drawing.Color.Red;
             this.lbBaseCur.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBaseCur.ForeColor = System.Drawing.Color.Black;
-            this.lbBaseCur.Location = new System.Drawing.Point(453, 143);
-            this.lbBaseCur.Margin = new System.Windows.Forms.Padding(7, 4, 7, 0);
+            this.lbBaseCur.Location = new System.Drawing.Point(340, 115);
+            this.lbBaseCur.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbBaseCur.Name = "lbBaseCur";
-            this.lbBaseCur.Padding = new System.Windows.Forms.Padding(20, 2, 20, 2);
-            this.lbBaseCur.Size = new System.Drawing.Size(121, 36);
+            this.lbBaseCur.Padding = new System.Windows.Forms.Padding(15, 2, 15, 2);
+            this.lbBaseCur.Size = new System.Drawing.Size(73, 23);
             this.lbBaseCur.TabIndex = 8;
             this.lbBaseCur.Text = "FAIL";
             // 
@@ -520,11 +500,11 @@ namespace Tool_Test_Ontrak_Pannel
             this.lbBase5.BackColor = System.Drawing.Color.Red;
             this.lbBase5.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBase5.ForeColor = System.Drawing.Color.Black;
-            this.lbBase5.Location = new System.Drawing.Point(453, 97);
-            this.lbBase5.Margin = new System.Windows.Forms.Padding(7, 4, 7, 0);
+            this.lbBase5.Location = new System.Drawing.Point(340, 78);
+            this.lbBase5.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbBase5.Name = "lbBase5";
-            this.lbBase5.Padding = new System.Windows.Forms.Padding(20, 2, 20, 2);
-            this.lbBase5.Size = new System.Drawing.Size(121, 36);
+            this.lbBase5.Padding = new System.Windows.Forms.Padding(15, 2, 15, 2);
+            this.lbBase5.Size = new System.Drawing.Size(73, 23);
             this.lbBase5.TabIndex = 7;
             this.lbBase5.Text = "FAIL";
             // 
@@ -534,11 +514,11 @@ namespace Tool_Test_Ontrak_Pannel
             this.lbBase3.BackColor = System.Drawing.Color.Red;
             this.lbBase3.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBase3.ForeColor = System.Drawing.Color.Black;
-            this.lbBase3.Location = new System.Drawing.Point(453, 51);
-            this.lbBase3.Margin = new System.Windows.Forms.Padding(7, 4, 7, 0);
+            this.lbBase3.Location = new System.Drawing.Point(340, 41);
+            this.lbBase3.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbBase3.Name = "lbBase3";
-            this.lbBase3.Padding = new System.Windows.Forms.Padding(20, 2, 20, 2);
-            this.lbBase3.Size = new System.Drawing.Size(121, 36);
+            this.lbBase3.Padding = new System.Windows.Forms.Padding(15, 2, 15, 2);
+            this.lbBase3.Size = new System.Drawing.Size(73, 23);
             this.lbBase3.TabIndex = 6;
             this.lbBase3.Text = "FAIL";
             // 
@@ -546,10 +526,10 @@ namespace Tool_Test_Ontrak_Pannel
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(1, 231);
+            this.label23.Location = new System.Drawing.Point(1, 186);
             this.label23.Margin = new System.Windows.Forms.Padding(0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(205, 24);
+            this.label23.Size = new System.Drawing.Size(163, 19);
             this.label23.TabIndex = 20;
             this.label23.Text = "Sync Wave 2      KHz";
             // 
@@ -557,10 +537,10 @@ namespace Tool_Test_Ontrak_Pannel
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(1, 185);
+            this.label24.Location = new System.Drawing.Point(1, 149);
             this.label24.Margin = new System.Windows.Forms.Padding(0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(206, 24);
+            this.label24.Size = new System.Drawing.Size(166, 19);
             this.label24.TabIndex = 19;
             this.label24.Text = "Sync Wave 38.4 MHz";
             // 
@@ -568,31 +548,29 @@ namespace Tool_Test_Ontrak_Pannel
             // 
             this.tboBaseCur.BackColor = System.Drawing.Color.Gainsboro;
             this.tboBaseCur.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboBaseCur.Location = new System.Drawing.Point(299, 141);
-            this.tboBaseCur.Margin = new System.Windows.Forms.Padding(7, 2, 7, 0);
+            this.tboBaseCur.Location = new System.Drawing.Point(224, 114);
+            this.tboBaseCur.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboBaseCur.Name = "tboBaseCur";
-            this.tboBaseCur.Size = new System.Drawing.Size(131, 35);
+            this.tboBaseCur.Size = new System.Drawing.Size(99, 29);
             this.tboBaseCur.TabIndex = 4;
             // 
             // tboBase2
             // 
             this.tboBase2.BackColor = System.Drawing.Color.Gainsboro;
             this.tboBase2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboBase2.Location = new System.Drawing.Point(299, 233);
-            this.tboBase2.Margin = new System.Windows.Forms.Padding(7, 2, 7, 0);
+            this.tboBase2.Location = new System.Drawing.Point(224, 188);
+            this.tboBase2.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboBase2.Name = "tboBase2";
-            this.tboBase2.Size = new System.Drawing.Size(131, 35);
+            this.tboBase2.Size = new System.Drawing.Size(99, 29);
             this.tboBase2.TabIndex = 22;
             // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.tableLayoutPanel2);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(413, 92);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox7.Location = new System.Drawing.Point(463, 203);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox7.Size = new System.Drawing.Size(601, 322);
+            this.groupBox7.Size = new System.Drawing.Size(451, 262);
             this.groupBox7.TabIndex = 13;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "SYNC-08";
@@ -623,8 +601,7 @@ namespace Tool_Test_Ontrak_Pannel
             this.tableLayoutPanel2.Controls.Add(this.label10, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.label8, 0, 1);
             this.tableLayoutPanel2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(8, 34);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 28);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 6;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -634,7 +611,7 @@ namespace Tool_Test_Ontrak_Pannel
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(585, 278);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(439, 226);
             this.tableLayoutPanel2.TabIndex = 12;
             // 
             // label17
@@ -642,10 +619,9 @@ namespace Tool_Test_Ontrak_Pannel
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label17.Location = new System.Drawing.Point(296, 1);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(222, 1);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(72, 23);
+            this.label17.Size = new System.Drawing.Size(60, 18);
             this.label17.TabIndex = 20;
             this.label17.Text = "VALUE";
             // 
@@ -654,10 +630,9 @@ namespace Tool_Test_Ontrak_Pannel
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label18.Location = new System.Drawing.Point(5, 1);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(4, 1);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(126, 23);
+            this.label18.Size = new System.Drawing.Size(98, 18);
             this.label18.TabIndex = 19;
             this.label18.Text = "TEST POINT";
             // 
@@ -666,20 +641,19 @@ namespace Tool_Test_Ontrak_Pannel
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label19.Location = new System.Drawing.Point(450, 1);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(338, 1);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(108, 23);
+            this.label19.Size = new System.Drawing.Size(87, 18);
             this.label19.TabIndex = 16;
             this.label19.Text = "PASS/FAIL";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(8, 237);
-            this.label11.Margin = new System.Windows.Forms.Padding(7, 6, 7, 0);
+            this.label11.Location = new System.Drawing.Point(6, 191);
+            this.label11.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(205, 24);
+            this.label11.Size = new System.Drawing.Size(163, 19);
             this.label11.TabIndex = 11;
             this.label11.Text = "Sync Wave 2      KHz";
             // 
@@ -687,10 +661,10 @@ namespace Tool_Test_Ontrak_Pannel
             // 
             this.tboSync2.BackColor = System.Drawing.Color.Gainsboro;
             this.tboSync2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboSync2.Location = new System.Drawing.Point(299, 233);
-            this.tboSync2.Margin = new System.Windows.Forms.Padding(7, 2, 7, 0);
+            this.tboSync2.Location = new System.Drawing.Point(224, 188);
+            this.tboSync2.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboSync2.Name = "tboSync2";
-            this.tboSync2.Size = new System.Drawing.Size(132, 35);
+            this.tboSync2.Size = new System.Drawing.Size(100, 29);
             this.tboSync2.TabIndex = 12;
             // 
             // lbSync2
@@ -699,11 +673,11 @@ namespace Tool_Test_Ontrak_Pannel
             this.lbSync2.BackColor = System.Drawing.Color.Red;
             this.lbSync2.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSync2.ForeColor = System.Drawing.Color.Black;
-            this.lbSync2.Location = new System.Drawing.Point(453, 235);
-            this.lbSync2.Margin = new System.Windows.Forms.Padding(7, 4, 7, 0);
+            this.lbSync2.Location = new System.Drawing.Point(340, 189);
+            this.lbSync2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbSync2.Name = "lbSync2";
-            this.lbSync2.Padding = new System.Windows.Forms.Padding(15, 3, 10, 0);
-            this.lbSync2.Size = new System.Drawing.Size(82, 28);
+            this.lbSync2.Padding = new System.Windows.Forms.Padding(11, 2, 8, 0);
+            this.lbSync2.Size = new System.Drawing.Size(62, 21);
             this.lbSync2.TabIndex = 14;
             this.lbSync2.Text = "FAIL";
             // 
@@ -713,11 +687,11 @@ namespace Tool_Test_Ontrak_Pannel
             this.lbSync384.BackColor = System.Drawing.Color.Red;
             this.lbSync384.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSync384.ForeColor = System.Drawing.Color.Black;
-            this.lbSync384.Location = new System.Drawing.Point(453, 189);
-            this.lbSync384.Margin = new System.Windows.Forms.Padding(7, 4, 7, 0);
+            this.lbSync384.Location = new System.Drawing.Point(340, 152);
+            this.lbSync384.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbSync384.Name = "lbSync384";
-            this.lbSync384.Padding = new System.Windows.Forms.Padding(15, 3, 10, 0);
-            this.lbSync384.Size = new System.Drawing.Size(82, 28);
+            this.lbSync384.Padding = new System.Windows.Forms.Padding(11, 2, 8, 0);
+            this.lbSync384.Size = new System.Drawing.Size(62, 21);
             this.lbSync384.TabIndex = 13;
             this.lbSync384.Text = "FAIL";
             // 
@@ -725,30 +699,30 @@ namespace Tool_Test_Ontrak_Pannel
             // 
             this.tboSync384.BackColor = System.Drawing.Color.Gainsboro;
             this.tboSync384.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboSync384.Location = new System.Drawing.Point(299, 187);
-            this.tboSync384.Margin = new System.Windows.Forms.Padding(7, 2, 7, 0);
+            this.tboSync384.Location = new System.Drawing.Point(224, 151);
+            this.tboSync384.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboSync384.Name = "tboSync384";
-            this.tboSync384.Size = new System.Drawing.Size(132, 35);
+            this.tboSync384.Size = new System.Drawing.Size(100, 29);
             this.tboSync384.TabIndex = 9;
             // 
             // tboSync48
             // 
             this.tboSync48.BackColor = System.Drawing.Color.Gainsboro;
             this.tboSync48.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboSync48.Location = new System.Drawing.Point(299, 141);
-            this.tboSync48.Margin = new System.Windows.Forms.Padding(7, 2, 7, 0);
+            this.tboSync48.Location = new System.Drawing.Point(224, 114);
+            this.tboSync48.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboSync48.Name = "tboSync48";
-            this.tboSync48.Size = new System.Drawing.Size(132, 35);
+            this.tboSync48.Size = new System.Drawing.Size(100, 29);
             this.tboSync48.TabIndex = 4;
             // 
             // tboSync5
             // 
             this.tboSync5.BackColor = System.Drawing.Color.Gainsboro;
             this.tboSync5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboSync5.Location = new System.Drawing.Point(299, 95);
-            this.tboSync5.Margin = new System.Windows.Forms.Padding(7, 2, 7, 0);
+            this.tboSync5.Location = new System.Drawing.Point(224, 77);
+            this.tboSync5.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboSync5.Name = "tboSync5";
-            this.tboSync5.Size = new System.Drawing.Size(132, 35);
+            this.tboSync5.Size = new System.Drawing.Size(100, 29);
             this.tboSync5.TabIndex = 2;
             // 
             // lbSync48
@@ -757,11 +731,11 @@ namespace Tool_Test_Ontrak_Pannel
             this.lbSync48.BackColor = System.Drawing.Color.Red;
             this.lbSync48.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSync48.ForeColor = System.Drawing.Color.Black;
-            this.lbSync48.Location = new System.Drawing.Point(453, 143);
-            this.lbSync48.Margin = new System.Windows.Forms.Padding(7, 4, 7, 0);
+            this.lbSync48.Location = new System.Drawing.Point(340, 115);
+            this.lbSync48.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbSync48.Name = "lbSync48";
-            this.lbSync48.Padding = new System.Windows.Forms.Padding(15, 3, 10, 0);
-            this.lbSync48.Size = new System.Drawing.Size(82, 28);
+            this.lbSync48.Padding = new System.Windows.Forms.Padding(11, 2, 8, 0);
+            this.lbSync48.Size = new System.Drawing.Size(62, 21);
             this.lbSync48.TabIndex = 8;
             this.lbSync48.Text = "FAIL";
             // 
@@ -771,11 +745,11 @@ namespace Tool_Test_Ontrak_Pannel
             this.lbSync5.BackColor = System.Drawing.Color.Red;
             this.lbSync5.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSync5.ForeColor = System.Drawing.Color.Black;
-            this.lbSync5.Location = new System.Drawing.Point(453, 97);
-            this.lbSync5.Margin = new System.Windows.Forms.Padding(7, 4, 7, 0);
+            this.lbSync5.Location = new System.Drawing.Point(340, 78);
+            this.lbSync5.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbSync5.Name = "lbSync5";
-            this.lbSync5.Padding = new System.Windows.Forms.Padding(15, 3, 10, 0);
-            this.lbSync5.Size = new System.Drawing.Size(82, 28);
+            this.lbSync5.Padding = new System.Windows.Forms.Padding(11, 2, 8, 0);
+            this.lbSync5.Size = new System.Drawing.Size(62, 21);
             this.lbSync5.TabIndex = 7;
             this.lbSync5.Text = "FAIL";
             // 
@@ -785,11 +759,11 @@ namespace Tool_Test_Ontrak_Pannel
             this.lbSync3.BackColor = System.Drawing.Color.Red;
             this.lbSync3.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSync3.ForeColor = System.Drawing.Color.Black;
-            this.lbSync3.Location = new System.Drawing.Point(453, 51);
-            this.lbSync3.Margin = new System.Windows.Forms.Padding(7, 4, 7, 0);
+            this.lbSync3.Location = new System.Drawing.Point(340, 41);
+            this.lbSync3.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbSync3.Name = "lbSync3";
-            this.lbSync3.Padding = new System.Windows.Forms.Padding(15, 3, 10, 0);
-            this.lbSync3.Size = new System.Drawing.Size(82, 28);
+            this.lbSync3.Padding = new System.Windows.Forms.Padding(11, 2, 8, 0);
+            this.lbSync3.Size = new System.Drawing.Size(62, 21);
             this.lbSync3.TabIndex = 6;
             this.lbSync3.Text = "FAIL";
             // 
@@ -797,39 +771,39 @@ namespace Tool_Test_Ontrak_Pannel
             // 
             this.tboSync3.BackColor = System.Drawing.Color.Gainsboro;
             this.tboSync3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboSync3.Location = new System.Drawing.Point(299, 49);
-            this.tboSync3.Margin = new System.Windows.Forms.Padding(7, 2, 7, 0);
+            this.tboSync3.Location = new System.Drawing.Point(224, 40);
+            this.tboSync3.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboSync3.Name = "tboSync3";
-            this.tboSync3.Size = new System.Drawing.Size(132, 35);
+            this.tboSync3.Size = new System.Drawing.Size(100, 29);
             this.tboSync3.TabIndex = 0;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(8, 191);
-            this.label9.Margin = new System.Windows.Forms.Padding(7, 6, 7, 0);
+            this.label9.Location = new System.Drawing.Point(6, 154);
+            this.label9.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(206, 24);
+            this.label9.Size = new System.Drawing.Size(166, 19);
             this.label9.TabIndex = 10;
             this.label9.Text = "Sync Wave 38.4 MHz";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(8, 145);
-            this.label12.Margin = new System.Windows.Forms.Padding(7, 6, 7, 0);
+            this.label12.Location = new System.Drawing.Point(6, 117);
+            this.label12.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(99, 24);
+            this.label12.Size = new System.Drawing.Size(79, 19);
             this.label12.TabIndex = 5;
             this.label12.Text = "Volt 48  V";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(8, 99);
-            this.label10.Margin = new System.Windows.Forms.Padding(7, 6, 7, 0);
+            this.label10.Location = new System.Drawing.Point(6, 80);
+            this.label10.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 24);
+            this.label10.Size = new System.Drawing.Size(78, 19);
             this.label10.TabIndex = 3;
             this.label10.Text = "Volt 5    V";
             // 
@@ -837,21 +811,19 @@ namespace Tool_Test_Ontrak_Pannel
             // 
             this.label8.AutoSize = true;
             this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label8.Location = new System.Drawing.Point(8, 53);
-            this.label8.Margin = new System.Windows.Forms.Padding(7, 6, 7, 0);
+            this.label8.Location = new System.Drawing.Point(6, 43);
+            this.label8.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 24);
+            this.label8.Size = new System.Drawing.Size(79, 19);
             this.label8.TabIndex = 1;
             this.label8.Text = "Volt 3.3 V";
             // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.tableLayoutPanel3);
-            this.groupBox8.Location = new System.Drawing.Point(413, 422);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox8.Location = new System.Drawing.Point(920, 203);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox8.Size = new System.Drawing.Size(601, 322);
+            this.groupBox8.Size = new System.Drawing.Size(451, 262);
             this.groupBox8.TabIndex = 14;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "ETAG-06";
@@ -875,8 +847,7 @@ namespace Tool_Test_Ontrak_Pannel
             this.tableLayoutPanel3.Controls.Add(this.lbEtagCurrRun, 2, 3);
             this.tableLayoutPanel3.Controls.Add(this.lbEtagCurSleep, 2, 2);
             this.tableLayoutPanel3.Controls.Add(this.lbEtag3, 2, 1);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(8, 34);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 28);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 6;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -886,7 +857,7 @@ namespace Tool_Test_Ontrak_Pannel
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(585, 281);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(439, 228);
             this.tableLayoutPanel3.TabIndex = 12;
             // 
             // label27
@@ -894,10 +865,9 @@ namespace Tool_Test_Ontrak_Pannel
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label27.Location = new System.Drawing.Point(450, 1);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Location = new System.Drawing.Point(338, 1);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(108, 23);
+            this.label27.Size = new System.Drawing.Size(87, 18);
             this.label27.TabIndex = 19;
             this.label27.Text = "PASS/FAIL";
             // 
@@ -905,10 +875,10 @@ namespace Tool_Test_Ontrak_Pannel
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(1, 139);
+            this.label15.Location = new System.Drawing.Point(1, 112);
             this.label15.Margin = new System.Windows.Forms.Padding(0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(221, 24);
+            this.label15.Size = new System.Drawing.Size(176, 19);
             this.label15.TabIndex = 8;
             this.label15.Text = "Transmit Current (mA)";
             // 
@@ -917,10 +887,9 @@ namespace Tool_Test_Ontrak_Pannel
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label28.Location = new System.Drawing.Point(296, 1);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Location = new System.Drawing.Point(222, 1);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(72, 23);
+            this.label28.Size = new System.Drawing.Size(60, 18);
             this.label28.TabIndex = 18;
             this.label28.Text = "VALUE";
             // 
@@ -928,10 +897,10 @@ namespace Tool_Test_Ontrak_Pannel
             // 
             this.lable.AutoSize = true;
             this.lable.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lable.Location = new System.Drawing.Point(1, 93);
+            this.lable.Location = new System.Drawing.Point(1, 75);
             this.lable.Margin = new System.Windows.Forms.Padding(0);
             this.lable.Name = "lable";
-            this.lable.Size = new System.Drawing.Size(190, 24);
+            this.lable.Size = new System.Drawing.Size(153, 19);
             this.lable.TabIndex = 3;
             this.lable.Text = "Sleep Current (mA)";
             // 
@@ -940,10 +909,9 @@ namespace Tool_Test_Ontrak_Pannel
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label29.Location = new System.Drawing.Point(5, 1);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Location = new System.Drawing.Point(4, 1);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(126, 23);
+            this.label29.Size = new System.Drawing.Size(98, 18);
             this.label29.TabIndex = 17;
             this.label29.Text = "TEST POINT";
             // 
@@ -952,10 +920,10 @@ namespace Tool_Test_Ontrak_Pannel
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label14.Location = new System.Drawing.Point(1, 47);
+            this.label14.Location = new System.Drawing.Point(1, 38);
             this.label14.Margin = new System.Windows.Forms.Padding(0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(113, 24);
+            this.label14.Size = new System.Drawing.Size(89, 19);
             this.label14.TabIndex = 1;
             this.label14.Text = "Volt 3.3 (V)";
             // 
@@ -963,30 +931,30 @@ namespace Tool_Test_Ontrak_Pannel
             // 
             this.tboEtagCurTrans.BackColor = System.Drawing.Color.Gainsboro;
             this.tboEtagCurTrans.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboEtagCurTrans.Location = new System.Drawing.Point(299, 141);
-            this.tboEtagCurTrans.Margin = new System.Windows.Forms.Padding(7, 2, 7, 0);
+            this.tboEtagCurTrans.Location = new System.Drawing.Point(224, 114);
+            this.tboEtagCurTrans.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboEtagCurTrans.Name = "tboEtagCurTrans";
-            this.tboEtagCurTrans.Size = new System.Drawing.Size(132, 35);
+            this.tboEtagCurTrans.Size = new System.Drawing.Size(100, 29);
             this.tboEtagCurTrans.TabIndex = 9;
             // 
             // tboEtagCurSleep
             // 
             this.tboEtagCurSleep.BackColor = System.Drawing.Color.Gainsboro;
             this.tboEtagCurSleep.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboEtagCurSleep.Location = new System.Drawing.Point(299, 95);
-            this.tboEtagCurSleep.Margin = new System.Windows.Forms.Padding(7, 2, 7, 0);
+            this.tboEtagCurSleep.Location = new System.Drawing.Point(224, 77);
+            this.tboEtagCurSleep.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboEtagCurSleep.Name = "tboEtagCurSleep";
-            this.tboEtagCurSleep.Size = new System.Drawing.Size(132, 35);
+            this.tboEtagCurSleep.Size = new System.Drawing.Size(100, 29);
             this.tboEtagCurSleep.TabIndex = 2;
             // 
             // tboEtag3
             // 
             this.tboEtag3.BackColor = System.Drawing.Color.Gainsboro;
             this.tboEtag3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboEtag3.Location = new System.Drawing.Point(299, 49);
-            this.tboEtag3.Margin = new System.Windows.Forms.Padding(7, 2, 7, 0);
+            this.tboEtag3.Location = new System.Drawing.Point(224, 40);
+            this.tboEtag3.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboEtag3.Name = "tboEtag3";
-            this.tboEtag3.Size = new System.Drawing.Size(132, 35);
+            this.tboEtag3.Size = new System.Drawing.Size(100, 29);
             this.tboEtag3.TabIndex = 0;
             // 
             // lbEtagCurrRun
@@ -995,11 +963,11 @@ namespace Tool_Test_Ontrak_Pannel
             this.lbEtagCurrRun.BackColor = System.Drawing.Color.Red;
             this.lbEtagCurrRun.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEtagCurrRun.ForeColor = System.Drawing.Color.Black;
-            this.lbEtagCurrRun.Location = new System.Drawing.Point(453, 143);
-            this.lbEtagCurrRun.Margin = new System.Windows.Forms.Padding(7, 4, 7, 0);
+            this.lbEtagCurrRun.Location = new System.Drawing.Point(340, 115);
+            this.lbEtagCurrRun.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbEtagCurrRun.Name = "lbEtagCurrRun";
-            this.lbEtagCurrRun.Padding = new System.Windows.Forms.Padding(15, 3, 10, 0);
-            this.lbEtagCurrRun.Size = new System.Drawing.Size(82, 28);
+            this.lbEtagCurrRun.Padding = new System.Windows.Forms.Padding(11, 2, 8, 0);
+            this.lbEtagCurrRun.Size = new System.Drawing.Size(62, 21);
             this.lbEtagCurrRun.TabIndex = 10;
             this.lbEtagCurrRun.Text = "FAIL";
             // 
@@ -1009,11 +977,11 @@ namespace Tool_Test_Ontrak_Pannel
             this.lbEtagCurSleep.BackColor = System.Drawing.Color.Red;
             this.lbEtagCurSleep.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEtagCurSleep.ForeColor = System.Drawing.Color.Black;
-            this.lbEtagCurSleep.Location = new System.Drawing.Point(453, 97);
-            this.lbEtagCurSleep.Margin = new System.Windows.Forms.Padding(7, 4, 7, 0);
+            this.lbEtagCurSleep.Location = new System.Drawing.Point(340, 78);
+            this.lbEtagCurSleep.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbEtagCurSleep.Name = "lbEtagCurSleep";
-            this.lbEtagCurSleep.Padding = new System.Windows.Forms.Padding(15, 3, 10, 0);
-            this.lbEtagCurSleep.Size = new System.Drawing.Size(82, 28);
+            this.lbEtagCurSleep.Padding = new System.Windows.Forms.Padding(11, 2, 8, 0);
+            this.lbEtagCurSleep.Size = new System.Drawing.Size(62, 21);
             this.lbEtagCurSleep.TabIndex = 7;
             this.lbEtagCurSleep.Text = "FAIL";
             // 
@@ -1023,37 +991,74 @@ namespace Tool_Test_Ontrak_Pannel
             this.lbEtag3.BackColor = System.Drawing.Color.Red;
             this.lbEtag3.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEtag3.ForeColor = System.Drawing.Color.Black;
-            this.lbEtag3.Location = new System.Drawing.Point(453, 51);
-            this.lbEtag3.Margin = new System.Windows.Forms.Padding(7, 4, 7, 0);
+            this.lbEtag3.Location = new System.Drawing.Point(340, 41);
+            this.lbEtag3.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbEtag3.Name = "lbEtag3";
-            this.lbEtag3.Padding = new System.Windows.Forms.Padding(15, 3, 10, 0);
-            this.lbEtag3.Size = new System.Drawing.Size(82, 28);
+            this.lbEtag3.Padding = new System.Windows.Forms.Padding(11, 2, 8, 0);
+            this.lbEtag3.Size = new System.Drawing.Size(62, 21);
             this.lbEtag3.TabIndex = 6;
             this.lbEtag3.Text = "FAIL";
             // 
-            // tbDebug
+            // btStartOsc
             // 
-            this.tbDebug.Location = new System.Drawing.Point(12, 21);
-            this.tbDebug.Multiline = true;
-            this.tbDebug.Name = "tbDebug";
-            this.tbDebug.Size = new System.Drawing.Size(357, 117);
-            this.tbDebug.TabIndex = 15;
+            this.btStartOsc.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btStartOsc.Location = new System.Drawing.Point(70, 19);
+            this.btStartOsc.Name = "btStartOsc";
+            this.btStartOsc.Size = new System.Drawing.Size(125, 33);
+            this.btStartOsc.TabIndex = 15;
+            this.btStartOsc.Text = "START";
+            this.btStartOsc.UseVisualStyleBackColor = true;
+            this.btStartOsc.Click += new System.EventHandler(this.btStartOsc_Click);
+            // 
+            // btStopOsc
+            // 
+            this.btStopOsc.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btStopOsc.Location = new System.Drawing.Point(300, 19);
+            this.btStopOsc.Name = "btStopOsc";
+            this.btStopOsc.Size = new System.Drawing.Size(125, 33);
+            this.btStopOsc.TabIndex = 16;
+            this.btStopOsc.Text = "STOP";
+            this.btStopOsc.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.tbDebug);
-            this.groupBox4.Location = new System.Drawing.Point(16, 611);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.tboFreq);
+            this.groupBox4.Controls.Add(this.btStartOsc);
+            this.groupBox4.Controls.Add(this.btStopOsc);
+            this.groupBox4.Location = new System.Drawing.Point(339, 489);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(377, 144);
-            this.groupBox4.TabIndex = 16;
+            this.groupBox4.Size = new System.Drawing.Size(514, 160);
+            this.groupBox4.TabIndex = 17;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "DEBUG";
+            this.groupBox4.Text = "Meansurement Sync Wave";
+            // 
+            // tboFreq
+            // 
+            this.tboFreq.BackColor = System.Drawing.Color.Gainsboro;
+            this.tboFreq.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboFreq.Location = new System.Drawing.Point(191, 93);
+            this.tboFreq.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
+            this.tboFreq.Name = "tboFreq";
+            this.tboFreq.Size = new System.Drawing.Size(111, 29);
+            this.tboFreq.TabIndex = 21;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label13.Location = new System.Drawing.Point(310, 99);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(26, 18);
+            this.label13.TabIndex = 21;
+            this.label13.Text = "Hz";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1635, 758);
+            this.ClientSize = new System.Drawing.Size(1376, 841);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox8);
@@ -1062,7 +1067,6 @@ namespace Tool_Test_Ontrak_Pannel
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -1163,8 +1167,11 @@ namespace Tool_Test_Ontrak_Pannel
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox tbDebug;
+        private System.Windows.Forms.Button btStartOsc;
+        private System.Windows.Forms.Button btStopOsc;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox tboFreq;
     }
 }
 
