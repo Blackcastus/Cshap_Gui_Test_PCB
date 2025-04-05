@@ -2,7 +2,7 @@
 
 namespace Tool_Test_Ontrak_Pannel
 {
-    partial class Form1
+    partial class fMain_Pannel
     {
         /// <summary>
         /// Required designer variable.
@@ -31,6 +31,7 @@ namespace Tool_Test_Ontrak_Pannel
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain_Pannel));
             this.cboCom = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@ namespace Tool_Test_Ontrak_Pannel
             this.lbComStatus = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -102,207 +102,120 @@ namespace Tool_Test_Ontrak_Pannel
             this.lbEtagCurrRun = new System.Windows.Forms.Label();
             this.lbEtagCurSleep = new System.Windows.Forms.Label();
             this.lbEtag3 = new System.Windows.Forms.Label();
-            this.btStartOsc = new System.Windows.Forms.Button();
-            this.btStopOsc = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.tboFreq = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.btOsci = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox6.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cboCom
             // 
+            resources.ApplyResources(this.cboCom, "cboCom");
             this.cboCom.FormattingEnabled = true;
-            this.cboCom.Location = new System.Drawing.Point(138, 3);
             this.cboCom.Name = "cboCom";
-            this.cboCom.Size = new System.Drawing.Size(121, 21);
-            this.cboCom.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Port:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 37);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Baudrate:";
             // 
             // cboBaud
             // 
+            resources.ApplyResources(this.cboBaud, "cboBaud");
             this.cboBaud.FormattingEnabled = true;
-            this.cboBaud.Location = new System.Drawing.Point(138, 40);
             this.cboBaud.Name = "cboBaud";
-            this.cboBaud.Size = new System.Drawing.Size(121, 21);
-            this.cboBaud.TabIndex = 3;
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.tableLayoutPanel4);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(386, 74);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(283, 113);
-            this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Serial Port Options";
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            resources.ApplyResources(this.tableLayoutPanel4, "tableLayoutPanel4");
             this.tableLayoutPanel4.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.cboCom, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.cboBaud, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(6, 23);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(271, 75);
-            this.tableLayoutPanel4.TabIndex = 6;
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(289, 8);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(499, 115);
-            this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
             // 
             // groupBox3
             // 
+            resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Controls.Add(this.tableLayoutPanel5);
-            this.groupBox3.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(780, 69);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(283, 118);
-            this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Status";
             // 
             // tableLayoutPanel5
             // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            resources.ApplyResources(this.tableLayoutPanel5, "tableLayoutPanel5");
             this.tableLayoutPanel5.Controls.Add(this.btConnect, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.btDisconnect, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.btRefresh, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.lbComStatus, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.label3, 1, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(6, 19);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 3;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(271, 92);
-            this.tableLayoutPanel5.TabIndex = 0;
             // 
             // btConnect
             // 
-            this.btConnect.Font = new System.Drawing.Font("Arial Narrow", 10F);
-            this.btConnect.Location = new System.Drawing.Point(3, 3);
+            resources.ApplyResources(this.btConnect, "btConnect");
             this.btConnect.Name = "btConnect";
-            this.btConnect.Size = new System.Drawing.Size(75, 24);
-            this.btConnect.TabIndex = 6;
-            this.btConnect.Text = "Connect";
             this.btConnect.UseVisualStyleBackColor = true;
             this.btConnect.Click += new System.EventHandler(this.btConnect_Click);
             // 
             // btDisconnect
             // 
-            this.btDisconnect.Font = new System.Drawing.Font("Arial Narrow", 10F);
-            this.btDisconnect.Location = new System.Drawing.Point(3, 34);
+            resources.ApplyResources(this.btDisconnect, "btDisconnect");
             this.btDisconnect.Name = "btDisconnect";
-            this.btDisconnect.Size = new System.Drawing.Size(75, 24);
-            this.btDisconnect.TabIndex = 7;
-            this.btDisconnect.Text = "Disconnect";
             this.btDisconnect.UseVisualStyleBackColor = true;
             this.btDisconnect.Click += new System.EventHandler(this.btDisconnect_Click);
             // 
             // btRefresh
             // 
-            this.btRefresh.Font = new System.Drawing.Font("Arial Narrow", 10F);
-            this.btRefresh.Location = new System.Drawing.Point(3, 65);
+            resources.ApplyResources(this.btRefresh, "btRefresh");
             this.btRefresh.Name = "btRefresh";
-            this.btRefresh.Size = new System.Drawing.Size(75, 24);
-            this.btRefresh.TabIndex = 9;
-            this.btRefresh.Text = "Refresh";
             this.btRefresh.UseVisualStyleBackColor = true;
             this.btRefresh.Click += new System.EventHandler(this.btRefresh_Click);
             // 
             // lbComStatus
             // 
-            this.lbComStatus.AutoSize = true;
-            this.lbComStatus.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lbComStatus, "lbComStatus");
             this.lbComStatus.ForeColor = System.Drawing.Color.Red;
-            this.lbComStatus.Location = new System.Drawing.Point(138, 36);
-            this.lbComStatus.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.lbComStatus.Name = "lbComStatus";
-            this.lbComStatus.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.lbComStatus.Size = new System.Drawing.Size(108, 20);
-            this.lbComStatus.TabIndex = 8;
-            this.lbComStatus.Text = "Disconnected";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label3, "label3");
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(138, 5);
-            this.label3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 20);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Connection Status";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(456, 18);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(397, 39);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "ONTRAK TEST PANEL";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = global::Tool_Test_Ontrak_Pannel.Properties.Resources.Logo_Ontrak_140_80;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(197, 117);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // serialPort1
             // 
@@ -310,21 +223,14 @@ namespace Tool_Test_Ontrak_Pannel
             // 
             // groupBox6
             // 
+            resources.ApplyResources(this.groupBox6, "groupBox6");
             this.groupBox6.Controls.Add(this.tableLayoutPanel1);
-            this.groupBox6.Location = new System.Drawing.Point(6, 203);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(451, 262);
-            this.groupBox6.TabIndex = 8;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "BASE-03";
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.5F));
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
             this.tableLayoutPanel1.Controls.Add(this.label20, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label22, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbBase2, 2, 5);
@@ -343,245 +249,123 @@ namespace Tool_Test_Ontrak_Pannel
             this.tableLayoutPanel1.Controls.Add(this.label24, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.tboBaseCur, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.tboBase2, 1, 5);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 28);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(439, 226);
-            this.tableLayoutPanel1.TabIndex = 12;
             // 
             // label20
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label20.Location = new System.Drawing.Point(222, 1);
+            resources.ApplyResources(this.label20, "label20");
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(60, 18);
-            this.label20.TabIndex = 20;
-            this.label20.Text = "VALUE";
             // 
             // label22
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label22.Location = new System.Drawing.Point(4, 1);
+            resources.ApplyResources(this.label22, "label22");
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(98, 18);
-            this.label22.TabIndex = 19;
-            this.label22.Text = "TEST POINT";
             // 
             // lbBase2
             // 
-            this.lbBase2.AutoSize = true;
+            resources.ApplyResources(this.lbBase2, "lbBase2");
             this.lbBase2.BackColor = System.Drawing.Color.Red;
-            this.lbBase2.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBase2.ForeColor = System.Drawing.Color.Black;
-            this.lbBase2.Location = new System.Drawing.Point(340, 189);
-            this.lbBase2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbBase2.Name = "lbBase2";
-            this.lbBase2.Padding = new System.Windows.Forms.Padding(15, 2, 15, 2);
-            this.lbBase2.Size = new System.Drawing.Size(73, 23);
-            this.lbBase2.TabIndex = 24;
-            this.lbBase2.Text = "FAIL";
             // 
             // lbBase384
             // 
-            this.lbBase384.AutoSize = true;
+            resources.ApplyResources(this.lbBase384, "lbBase384");
             this.lbBase384.BackColor = System.Drawing.Color.Red;
-            this.lbBase384.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBase384.ForeColor = System.Drawing.Color.Black;
-            this.lbBase384.Location = new System.Drawing.Point(340, 152);
-            this.lbBase384.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbBase384.Name = "lbBase384";
-            this.lbBase384.Padding = new System.Windows.Forms.Padding(15, 2, 15, 2);
-            this.lbBase384.Size = new System.Drawing.Size(73, 23);
-            this.lbBase384.TabIndex = 23;
-            this.lbBase384.Text = "FAIL";
             // 
             // tboBase384
             // 
+            resources.ApplyResources(this.tboBase384, "tboBase384");
             this.tboBase384.BackColor = System.Drawing.Color.Gainsboro;
-            this.tboBase384.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboBase384.Location = new System.Drawing.Point(224, 151);
-            this.tboBase384.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboBase384.Name = "tboBase384";
-            this.tboBase384.Size = new System.Drawing.Size(99, 29);
-            this.tboBase384.TabIndex = 21;
             // 
             // label21
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label21.Location = new System.Drawing.Point(338, 1);
+            resources.ApplyResources(this.label21, "label21");
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(87, 18);
-            this.label21.TabIndex = 18;
-            this.label21.Text = "PASS/FAIL";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1, 112);
-            this.label7.Margin = new System.Windows.Forms.Padding(0);
+            resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 19);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Current  mA";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1, 75);
-            this.label6.Margin = new System.Windows.Forms.Padding(0);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 19);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Volt 5    V";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label5.Location = new System.Drawing.Point(1, 38);
-            this.label5.Margin = new System.Windows.Forms.Padding(0);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 19);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Volt 3.3 V";
             // 
             // tboBase5
             // 
+            resources.ApplyResources(this.tboBase5, "tboBase5");
             this.tboBase5.BackColor = System.Drawing.Color.Gainsboro;
-            this.tboBase5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboBase5.Location = new System.Drawing.Point(224, 77);
-            this.tboBase5.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboBase5.Name = "tboBase5";
-            this.tboBase5.Size = new System.Drawing.Size(99, 29);
-            this.tboBase5.TabIndex = 2;
             // 
             // tboBase3
             // 
+            resources.ApplyResources(this.tboBase3, "tboBase3");
             this.tboBase3.BackColor = System.Drawing.Color.Gainsboro;
-            this.tboBase3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboBase3.Location = new System.Drawing.Point(224, 40);
-            this.tboBase3.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboBase3.Name = "tboBase3";
-            this.tboBase3.Size = new System.Drawing.Size(99, 29);
-            this.tboBase3.TabIndex = 0;
             // 
             // lbBaseCur
             // 
-            this.lbBaseCur.AutoSize = true;
+            resources.ApplyResources(this.lbBaseCur, "lbBaseCur");
             this.lbBaseCur.BackColor = System.Drawing.Color.Red;
-            this.lbBaseCur.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBaseCur.ForeColor = System.Drawing.Color.Black;
-            this.lbBaseCur.Location = new System.Drawing.Point(340, 115);
-            this.lbBaseCur.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbBaseCur.Name = "lbBaseCur";
-            this.lbBaseCur.Padding = new System.Windows.Forms.Padding(15, 2, 15, 2);
-            this.lbBaseCur.Size = new System.Drawing.Size(73, 23);
-            this.lbBaseCur.TabIndex = 8;
-            this.lbBaseCur.Text = "FAIL";
             // 
             // lbBase5
             // 
-            this.lbBase5.AutoSize = true;
+            resources.ApplyResources(this.lbBase5, "lbBase5");
             this.lbBase5.BackColor = System.Drawing.Color.Red;
-            this.lbBase5.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBase5.ForeColor = System.Drawing.Color.Black;
-            this.lbBase5.Location = new System.Drawing.Point(340, 78);
-            this.lbBase5.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbBase5.Name = "lbBase5";
-            this.lbBase5.Padding = new System.Windows.Forms.Padding(15, 2, 15, 2);
-            this.lbBase5.Size = new System.Drawing.Size(73, 23);
-            this.lbBase5.TabIndex = 7;
-            this.lbBase5.Text = "FAIL";
             // 
             // lbBase3
             // 
-            this.lbBase3.AutoSize = true;
+            resources.ApplyResources(this.lbBase3, "lbBase3");
             this.lbBase3.BackColor = System.Drawing.Color.Red;
-            this.lbBase3.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBase3.ForeColor = System.Drawing.Color.Black;
-            this.lbBase3.Location = new System.Drawing.Point(340, 41);
-            this.lbBase3.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbBase3.Name = "lbBase3";
-            this.lbBase3.Padding = new System.Windows.Forms.Padding(15, 2, 15, 2);
-            this.lbBase3.Size = new System.Drawing.Size(73, 23);
-            this.lbBase3.TabIndex = 6;
-            this.lbBase3.Text = "FAIL";
             // 
             // label23
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(1, 186);
-            this.label23.Margin = new System.Windows.Forms.Padding(0);
+            resources.ApplyResources(this.label23, "label23");
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(163, 19);
-            this.label23.TabIndex = 20;
-            this.label23.Text = "Sync Wave 2      KHz";
             // 
             // label24
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(1, 149);
-            this.label24.Margin = new System.Windows.Forms.Padding(0);
+            resources.ApplyResources(this.label24, "label24");
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(166, 19);
-            this.label24.TabIndex = 19;
-            this.label24.Text = "Sync Wave 38.4 MHz";
             // 
             // tboBaseCur
             // 
+            resources.ApplyResources(this.tboBaseCur, "tboBaseCur");
             this.tboBaseCur.BackColor = System.Drawing.Color.Gainsboro;
-            this.tboBaseCur.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboBaseCur.Location = new System.Drawing.Point(224, 114);
-            this.tboBaseCur.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboBaseCur.Name = "tboBaseCur";
-            this.tboBaseCur.Size = new System.Drawing.Size(99, 29);
-            this.tboBaseCur.TabIndex = 4;
             // 
             // tboBase2
             // 
+            resources.ApplyResources(this.tboBase2, "tboBase2");
             this.tboBase2.BackColor = System.Drawing.Color.Gainsboro;
-            this.tboBase2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboBase2.Location = new System.Drawing.Point(224, 188);
-            this.tboBase2.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboBase2.Name = "tboBase2";
-            this.tboBase2.Size = new System.Drawing.Size(99, 29);
-            this.tboBase2.TabIndex = 22;
             // 
             // groupBox7
             // 
+            resources.ApplyResources(this.groupBox7, "groupBox7");
             this.groupBox7.Controls.Add(this.tableLayoutPanel2);
-            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(463, 203);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(451, 262);
-            this.groupBox7.TabIndex = 13;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "SYNC-08";
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.5F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.5F));
+            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
             this.tableLayoutPanel2.Controls.Add(this.label17, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label18, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label19, 2, 0);
@@ -600,241 +384,123 @@ namespace Tool_Test_Ontrak_Pannel
             this.tableLayoutPanel2.Controls.Add(this.label12, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.label10, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.label8, 0, 1);
-            this.tableLayoutPanel2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 28);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 6;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(439, 226);
-            this.tableLayoutPanel2.TabIndex = 12;
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label17.Location = new System.Drawing.Point(222, 1);
+            resources.ApplyResources(this.label17, "label17");
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(60, 18);
-            this.label17.TabIndex = 20;
-            this.label17.Text = "VALUE";
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label18.Location = new System.Drawing.Point(4, 1);
+            resources.ApplyResources(this.label18, "label18");
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(98, 18);
-            this.label18.TabIndex = 19;
-            this.label18.Text = "TEST POINT";
             // 
             // label19
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label19.Location = new System.Drawing.Point(338, 1);
+            resources.ApplyResources(this.label19, "label19");
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(87, 18);
-            this.label19.TabIndex = 16;
-            this.label19.Text = "PASS/FAIL";
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 191);
-            this.label11.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
+            resources.ApplyResources(this.label11, "label11");
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(163, 19);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Sync Wave 2      KHz";
             // 
             // tboSync2
             // 
+            resources.ApplyResources(this.tboSync2, "tboSync2");
             this.tboSync2.BackColor = System.Drawing.Color.Gainsboro;
-            this.tboSync2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboSync2.Location = new System.Drawing.Point(224, 188);
-            this.tboSync2.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboSync2.Name = "tboSync2";
-            this.tboSync2.Size = new System.Drawing.Size(100, 29);
-            this.tboSync2.TabIndex = 12;
             // 
             // lbSync2
             // 
-            this.lbSync2.AutoSize = true;
+            resources.ApplyResources(this.lbSync2, "lbSync2");
             this.lbSync2.BackColor = System.Drawing.Color.Red;
-            this.lbSync2.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSync2.ForeColor = System.Drawing.Color.Black;
-            this.lbSync2.Location = new System.Drawing.Point(340, 189);
-            this.lbSync2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbSync2.Name = "lbSync2";
-            this.lbSync2.Padding = new System.Windows.Forms.Padding(11, 2, 8, 0);
-            this.lbSync2.Size = new System.Drawing.Size(62, 21);
-            this.lbSync2.TabIndex = 14;
-            this.lbSync2.Text = "FAIL";
             // 
             // lbSync384
             // 
-            this.lbSync384.AutoSize = true;
+            resources.ApplyResources(this.lbSync384, "lbSync384");
             this.lbSync384.BackColor = System.Drawing.Color.Red;
-            this.lbSync384.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSync384.ForeColor = System.Drawing.Color.Black;
-            this.lbSync384.Location = new System.Drawing.Point(340, 152);
-            this.lbSync384.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbSync384.Name = "lbSync384";
-            this.lbSync384.Padding = new System.Windows.Forms.Padding(11, 2, 8, 0);
-            this.lbSync384.Size = new System.Drawing.Size(62, 21);
-            this.lbSync384.TabIndex = 13;
-            this.lbSync384.Text = "FAIL";
             // 
             // tboSync384
             // 
+            resources.ApplyResources(this.tboSync384, "tboSync384");
             this.tboSync384.BackColor = System.Drawing.Color.Gainsboro;
-            this.tboSync384.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboSync384.Location = new System.Drawing.Point(224, 151);
-            this.tboSync384.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboSync384.Name = "tboSync384";
-            this.tboSync384.Size = new System.Drawing.Size(100, 29);
-            this.tboSync384.TabIndex = 9;
             // 
             // tboSync48
             // 
+            resources.ApplyResources(this.tboSync48, "tboSync48");
             this.tboSync48.BackColor = System.Drawing.Color.Gainsboro;
-            this.tboSync48.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboSync48.Location = new System.Drawing.Point(224, 114);
-            this.tboSync48.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboSync48.Name = "tboSync48";
-            this.tboSync48.Size = new System.Drawing.Size(100, 29);
-            this.tboSync48.TabIndex = 4;
             // 
             // tboSync5
             // 
+            resources.ApplyResources(this.tboSync5, "tboSync5");
             this.tboSync5.BackColor = System.Drawing.Color.Gainsboro;
-            this.tboSync5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboSync5.Location = new System.Drawing.Point(224, 77);
-            this.tboSync5.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboSync5.Name = "tboSync5";
-            this.tboSync5.Size = new System.Drawing.Size(100, 29);
-            this.tboSync5.TabIndex = 2;
             // 
             // lbSync48
             // 
-            this.lbSync48.AutoSize = true;
+            resources.ApplyResources(this.lbSync48, "lbSync48");
             this.lbSync48.BackColor = System.Drawing.Color.Red;
-            this.lbSync48.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSync48.ForeColor = System.Drawing.Color.Black;
-            this.lbSync48.Location = new System.Drawing.Point(340, 115);
-            this.lbSync48.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbSync48.Name = "lbSync48";
-            this.lbSync48.Padding = new System.Windows.Forms.Padding(11, 2, 8, 0);
-            this.lbSync48.Size = new System.Drawing.Size(62, 21);
-            this.lbSync48.TabIndex = 8;
-            this.lbSync48.Text = "FAIL";
             // 
             // lbSync5
             // 
-            this.lbSync5.AutoSize = true;
+            resources.ApplyResources(this.lbSync5, "lbSync5");
             this.lbSync5.BackColor = System.Drawing.Color.Red;
-            this.lbSync5.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSync5.ForeColor = System.Drawing.Color.Black;
-            this.lbSync5.Location = new System.Drawing.Point(340, 78);
-            this.lbSync5.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbSync5.Name = "lbSync5";
-            this.lbSync5.Padding = new System.Windows.Forms.Padding(11, 2, 8, 0);
-            this.lbSync5.Size = new System.Drawing.Size(62, 21);
-            this.lbSync5.TabIndex = 7;
-            this.lbSync5.Text = "FAIL";
             // 
             // lbSync3
             // 
-            this.lbSync3.AutoSize = true;
+            resources.ApplyResources(this.lbSync3, "lbSync3");
             this.lbSync3.BackColor = System.Drawing.Color.Red;
-            this.lbSync3.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSync3.ForeColor = System.Drawing.Color.Black;
-            this.lbSync3.Location = new System.Drawing.Point(340, 41);
-            this.lbSync3.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbSync3.Name = "lbSync3";
-            this.lbSync3.Padding = new System.Windows.Forms.Padding(11, 2, 8, 0);
-            this.lbSync3.Size = new System.Drawing.Size(62, 21);
-            this.lbSync3.TabIndex = 6;
-            this.lbSync3.Text = "FAIL";
             // 
             // tboSync3
             // 
+            resources.ApplyResources(this.tboSync3, "tboSync3");
             this.tboSync3.BackColor = System.Drawing.Color.Gainsboro;
-            this.tboSync3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboSync3.Location = new System.Drawing.Point(224, 40);
-            this.tboSync3.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboSync3.Name = "tboSync3";
-            this.tboSync3.Size = new System.Drawing.Size(100, 29);
-            this.tboSync3.TabIndex = 0;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 154);
-            this.label9.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
+            resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(166, 19);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Sync Wave 38.4 MHz";
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 117);
-            this.label12.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
+            resources.ApplyResources(this.label12, "label12");
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 19);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "Volt 48  V";
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 80);
-            this.label10.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
+            resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 19);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Volt 5    V";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label8.Location = new System.Drawing.Point(6, 43);
-            this.label8.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
+            resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(79, 19);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Volt 3.3 V";
             // 
             // groupBox8
             // 
+            resources.ApplyResources(this.groupBox8, "groupBox8");
             this.groupBox8.Controls.Add(this.tableLayoutPanel3);
-            this.groupBox8.Location = new System.Drawing.Point(920, 203);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(451, 262);
-            this.groupBox8.TabIndex = 14;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "ETAG-06";
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.5F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.5F));
+            resources.ApplyResources(this.tableLayoutPanel3, "tableLayoutPanel3");
             this.tableLayoutPanel3.Controls.Add(this.label27, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.label15, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.label28, 1, 0);
@@ -847,219 +513,97 @@ namespace Tool_Test_Ontrak_Pannel
             this.tableLayoutPanel3.Controls.Add(this.lbEtagCurrRun, 2, 3);
             this.tableLayoutPanel3.Controls.Add(this.lbEtagCurSleep, 2, 2);
             this.tableLayoutPanel3.Controls.Add(this.lbEtag3, 2, 1);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 28);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 6;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(439, 228);
-            this.tableLayoutPanel3.TabIndex = 12;
             // 
             // label27
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label27.Location = new System.Drawing.Point(338, 1);
+            resources.ApplyResources(this.label27, "label27");
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(87, 18);
-            this.label27.TabIndex = 19;
-            this.label27.Text = "PASS/FAIL";
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(1, 112);
-            this.label15.Margin = new System.Windows.Forms.Padding(0);
+            resources.ApplyResources(this.label15, "label15");
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(176, 19);
-            this.label15.TabIndex = 8;
-            this.label15.Text = "Transmit Current (mA)";
             // 
             // label28
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label28.Location = new System.Drawing.Point(222, 1);
+            resources.ApplyResources(this.label28, "label28");
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(60, 18);
-            this.label28.TabIndex = 18;
-            this.label28.Text = "VALUE";
             // 
             // lable
             // 
-            this.lable.AutoSize = true;
-            this.lable.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lable.Location = new System.Drawing.Point(1, 75);
-            this.lable.Margin = new System.Windows.Forms.Padding(0);
+            resources.ApplyResources(this.lable, "lable");
             this.lable.Name = "lable";
-            this.lable.Size = new System.Drawing.Size(153, 19);
-            this.lable.TabIndex = 3;
-            this.lable.Text = "Sleep Current (mA)";
             // 
             // label29
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label29.Location = new System.Drawing.Point(4, 1);
+            resources.ApplyResources(this.label29, "label29");
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(98, 18);
-            this.label29.TabIndex = 17;
-            this.label29.Text = "TEST POINT";
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label14.Location = new System.Drawing.Point(1, 38);
-            this.label14.Margin = new System.Windows.Forms.Padding(0);
+            resources.ApplyResources(this.label14, "label14");
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(89, 19);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Volt 3.3 (V)";
             // 
             // tboEtagCurTrans
             // 
+            resources.ApplyResources(this.tboEtagCurTrans, "tboEtagCurTrans");
             this.tboEtagCurTrans.BackColor = System.Drawing.Color.Gainsboro;
-            this.tboEtagCurTrans.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboEtagCurTrans.Location = new System.Drawing.Point(224, 114);
-            this.tboEtagCurTrans.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboEtagCurTrans.Name = "tboEtagCurTrans";
-            this.tboEtagCurTrans.Size = new System.Drawing.Size(100, 29);
-            this.tboEtagCurTrans.TabIndex = 9;
             // 
             // tboEtagCurSleep
             // 
+            resources.ApplyResources(this.tboEtagCurSleep, "tboEtagCurSleep");
             this.tboEtagCurSleep.BackColor = System.Drawing.Color.Gainsboro;
-            this.tboEtagCurSleep.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboEtagCurSleep.Location = new System.Drawing.Point(224, 77);
-            this.tboEtagCurSleep.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboEtagCurSleep.Name = "tboEtagCurSleep";
-            this.tboEtagCurSleep.Size = new System.Drawing.Size(100, 29);
-            this.tboEtagCurSleep.TabIndex = 2;
             // 
             // tboEtag3
             // 
+            resources.ApplyResources(this.tboEtag3, "tboEtag3");
             this.tboEtag3.BackColor = System.Drawing.Color.Gainsboro;
-            this.tboEtag3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboEtag3.Location = new System.Drawing.Point(224, 40);
-            this.tboEtag3.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
             this.tboEtag3.Name = "tboEtag3";
-            this.tboEtag3.Size = new System.Drawing.Size(100, 29);
-            this.tboEtag3.TabIndex = 0;
             // 
             // lbEtagCurrRun
             // 
-            this.lbEtagCurrRun.AutoSize = true;
+            resources.ApplyResources(this.lbEtagCurrRun, "lbEtagCurrRun");
             this.lbEtagCurrRun.BackColor = System.Drawing.Color.Red;
-            this.lbEtagCurrRun.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEtagCurrRun.ForeColor = System.Drawing.Color.Black;
-            this.lbEtagCurrRun.Location = new System.Drawing.Point(340, 115);
-            this.lbEtagCurrRun.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbEtagCurrRun.Name = "lbEtagCurrRun";
-            this.lbEtagCurrRun.Padding = new System.Windows.Forms.Padding(11, 2, 8, 0);
-            this.lbEtagCurrRun.Size = new System.Drawing.Size(62, 21);
-            this.lbEtagCurrRun.TabIndex = 10;
-            this.lbEtagCurrRun.Text = "FAIL";
             // 
             // lbEtagCurSleep
             // 
-            this.lbEtagCurSleep.AutoSize = true;
+            resources.ApplyResources(this.lbEtagCurSleep, "lbEtagCurSleep");
             this.lbEtagCurSleep.BackColor = System.Drawing.Color.Red;
-            this.lbEtagCurSleep.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEtagCurSleep.ForeColor = System.Drawing.Color.Black;
-            this.lbEtagCurSleep.Location = new System.Drawing.Point(340, 78);
-            this.lbEtagCurSleep.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbEtagCurSleep.Name = "lbEtagCurSleep";
-            this.lbEtagCurSleep.Padding = new System.Windows.Forms.Padding(11, 2, 8, 0);
-            this.lbEtagCurSleep.Size = new System.Drawing.Size(62, 21);
-            this.lbEtagCurSleep.TabIndex = 7;
-            this.lbEtagCurSleep.Text = "FAIL";
             // 
             // lbEtag3
             // 
-            this.lbEtag3.AutoSize = true;
+            resources.ApplyResources(this.lbEtag3, "lbEtag3");
             this.lbEtag3.BackColor = System.Drawing.Color.Red;
-            this.lbEtag3.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEtag3.ForeColor = System.Drawing.Color.Black;
-            this.lbEtag3.Location = new System.Drawing.Point(340, 41);
-            this.lbEtag3.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.lbEtag3.Name = "lbEtag3";
-            this.lbEtag3.Padding = new System.Windows.Forms.Padding(11, 2, 8, 0);
-            this.lbEtag3.Size = new System.Drawing.Size(62, 21);
-            this.lbEtag3.TabIndex = 6;
-            this.lbEtag3.Text = "FAIL";
             // 
-            // btStartOsc
+            // btOsci
             // 
-            this.btStartOsc.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btStartOsc.Location = new System.Drawing.Point(70, 19);
-            this.btStartOsc.Name = "btStartOsc";
-            this.btStartOsc.Size = new System.Drawing.Size(125, 33);
-            this.btStartOsc.TabIndex = 15;
-            this.btStartOsc.Text = "START";
-            this.btStartOsc.UseVisualStyleBackColor = true;
-            this.btStartOsc.Click += new System.EventHandler(this.btStartOsc_Click);
+            resources.ApplyResources(this.btOsci, "btOsci");
+            this.btOsci.Name = "btOsci";
+            this.btOsci.UseVisualStyleBackColor = true;
+            this.btOsci.Click += new System.EventHandler(this.btOsci_Click);
             // 
-            // btStopOsc
+            // pictureBox1
             // 
-            this.btStopOsc.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btStopOsc.Location = new System.Drawing.Point(300, 19);
-            this.btStopOsc.Name = "btStopOsc";
-            this.btStopOsc.Size = new System.Drawing.Size(125, 33);
-            this.btStopOsc.TabIndex = 16;
-            this.btStopOsc.Text = "STOP";
-            this.btStopOsc.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox1.Image = global::Tool_Test_Ontrak_Pannel.Properties.Resources.Logo_Ontrak_140_80;
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
-            // groupBox4
+            // fMain_Pannel
             // 
-            this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.tboFreq);
-            this.groupBox4.Controls.Add(this.btStartOsc);
-            this.groupBox4.Controls.Add(this.btStopOsc);
-            this.groupBox4.Location = new System.Drawing.Point(339, 489);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(514, 160);
-            this.groupBox4.TabIndex = 17;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Meansurement Sync Wave";
-            // 
-            // tboFreq
-            // 
-            this.tboFreq.BackColor = System.Drawing.Color.Gainsboro;
-            this.tboFreq.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboFreq.Location = new System.Drawing.Point(191, 93);
-            this.tboFreq.Margin = new System.Windows.Forms.Padding(5, 2, 5, 0);
-            this.tboFreq.Name = "tboFreq";
-            this.tboFreq.Size = new System.Drawing.Size(111, 29);
-            this.tboFreq.TabIndex = 21;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label13.Location = new System.Drawing.Point(310, 99);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(26, 18);
-            this.label13.TabIndex = 21;
-            this.label13.Text = "Hz";
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1376, 841);
-            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.btOsci);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.pictureBox1);
@@ -1067,9 +611,7 @@ namespace Tool_Test_Ontrak_Pannel
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Name = "fMain_Pannel";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -1077,7 +619,6 @@ namespace Tool_Test_Ontrak_Pannel
             this.groupBox3.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -1087,8 +628,7 @@ namespace Tool_Test_Ontrak_Pannel
             this.groupBox8.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1167,11 +707,7 @@ namespace Tool_Test_Ontrak_Pannel
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button btStartOsc;
-        private System.Windows.Forms.Button btStopOsc;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox tboFreq;
+        private System.Windows.Forms.Button btOsci;
     }
 }
 

@@ -16,7 +16,7 @@ namespace Tool_Test_Ontrak_Pannel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new fMain_Pannel());
         }
     }
 }
