@@ -8,35 +8,28 @@ namespace Tool_Test_Ontrak_Pannel
 {
     public class PcbSync
     {
-        private double mVolt3v3;
-        private double mVolt5v;
-        private double mVolt48v;
-        private double mSync384;
-        private double mSync2;
+        public DataStructure pVolt3;
+        public DataStructure pVolt5;
+        public DataStructure pVolt48;
+        public DataStructure pFreqMHz;
+        public DataStructure pFreqKHz;
 
         public PcbSync()
         {
-            ResetVariable();
+            pVolt3 = new DataStructure();
+            pVolt5 = new DataStructure();
+            pVolt48 = new DataStructure();
+            pFreqMHz = new DataStructure();
+            pFreqKHz = new DataStructure();
         }
 
-        public void ResetVariable()
+        public void ResetValue()
         {
-            mVolt3v3 = 0;
-            mVolt5v = 0;
-            mVolt48v = 0;
-            mSync384 = 0;
-            mSync2 = 0;
+            pVolt3.SetParam(0, "", false);
+            pVolt5.SetParam(0, "", false);
+            pVolt48.SetParam(0, "", false);
+            //pFreqMHz.SetParam(0, "", false);
+            //pFreqKHz.SetParam(0, "", false);
         }
-        public void setVolt3v3(double value) => mVolt3v3 = value;
-        public void setVolt5v(double value) => mVolt5v = value;
-        public void setVolt48v(double value) => mVolt48v = value;
-        public void setSync384(double value) => mSync384 = value;
-        public void setSync2(double value) => mSync2 = value;
-
-        public double GetVolt3v3() => mVolt3v3;
-        public double GetVolt5v() => mVolt5v;
-        public double GetVolt48v() => mVolt48v;
-        public double GetSync384() => mSync384;
-        public double GetSync2() => mSync2;
     }
 }

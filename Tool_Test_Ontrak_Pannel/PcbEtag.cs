@@ -8,27 +8,21 @@ namespace Tool_Test_Ontrak_Pannel
 {
     class PcbEtag
     {
-        private double mVolt3v3;
-        private double mCurrentSleepMode;
-        private double mCurrentTransMode;
-
+        public DataStructure pVolt3;
+        public DataStructure pCurSleepMode;
+        public DataStructure pCurTrasMode;
         public PcbEtag()
         {
-            ResetVariable();
+            pVolt3 = new DataStructure();
+            pCurSleepMode = new DataStructure();
+            pCurTrasMode = new DataStructure();
         }
 
-        public void ResetVariable()
+        public void ResetValue()
         {
-            mVolt3v3 = 0;
-            mCurrentSleepMode = 0;
-            mCurrentTransMode = 0;
+            pVolt3.SetParam(0, "", false);
+            pCurSleepMode.SetParam(0, "", false);
+            pCurTrasMode.SetParam(0, "", false);
         }
-        public void SetVolt3v3(double value) => mVolt3v3 = value;
-        public void SetCurrentSleepMode(double value) => mCurrentSleepMode = value;
-        public void SetCurrentTransMode(double value) => mCurrentTransMode = value;
-
-        public double GetVolt3v3() => mVolt3v3;
-        public double GetCurrentSleepMode() => mCurrentSleepMode;
-        public double GetCurrentTransMode() => mCurrentTransMode;
     }
 }
