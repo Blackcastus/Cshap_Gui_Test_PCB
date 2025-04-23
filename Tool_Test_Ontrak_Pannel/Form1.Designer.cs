@@ -100,7 +100,6 @@ namespace Tool_Test_Ontrak_Pannel
             this.lbEtagCurrTrans = new System.Windows.Forms.Label();
             this.lbEtagCurSleep = new System.Windows.Forms.Label();
             this.lbEtagVolt3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -118,8 +117,6 @@ namespace Tool_Test_Ontrak_Pannel
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -211,6 +208,7 @@ namespace Tool_Test_Ontrak_Pannel
             // 
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // serialPort1
             // 
@@ -585,17 +583,8 @@ namespace Tool_Test_Ontrak_Pannel
             this.lbEtagVolt3.ForeColor = System.Drawing.Color.Black;
             this.lbEtagVolt3.Name = "lbEtagVolt3";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = global::Tool_Test_Ontrak_Pannel.Properties.Resources.Logo_Ontrak_140_80;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox1);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
@@ -668,8 +657,6 @@ namespace Tool_Test_Ontrak_Pannel
             this.groupBox8.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
@@ -690,7 +677,6 @@ namespace Tool_Test_Ontrak_Pannel
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btConnect;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label5;

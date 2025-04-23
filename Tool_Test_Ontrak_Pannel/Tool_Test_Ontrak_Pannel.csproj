@@ -156,6 +156,7 @@
   <ItemGroup>
     <Compile Include="DataProcessing.cs" />
     <Compile Include="DataStructure.cs" />
+    <Compile Include="hantek6254bc.cs" />
     <Compile Include="KalmanFilter.cs" />
     <Compile Include="PcbBase.cs" />
     <Compile Include="Form1.cs">

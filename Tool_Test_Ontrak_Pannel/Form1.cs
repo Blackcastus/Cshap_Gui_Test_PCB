@@ -35,7 +35,8 @@ namespace Tool_Test_Ontrak_Pannel
         private PcbBase pPcbBase03;
         private PcbSync pPcbSync08;
         private PcbEtag pPcbEtag06;
-        private DataProcessing pDataProcessing; 
+        private DataProcessing pDataProcessing;
+        private hantek6254bc phantek;
         private string serialBuffer = "";
         
         bool mStatusConnectOsci = false;
@@ -45,11 +46,16 @@ namespace Tool_Test_Ontrak_Pannel
         private Dictionary<string, DataStructure> mSerialDicData = new Dictionary<string, DataStructure>();
         public fMain_Pannel()
         {
+
+            string curPath = Directory.GetCurrentDirectory();
+            Console.WriteLine(curPath);
+
             // new instance
             pPcbBase03 = new PcbBase();
             pPcbSync08 = new PcbSync();
             pPcbEtag06 = new PcbEtag();
             pDataProcessing = new DataProcessing();
+            phantek = new hantek6254bc();
 
             InitializeComponent();
             InitDictionary();
@@ -87,7 +93,7 @@ namespace Tool_Test_Ontrak_Pannel
             timer_100ms.Start();
 
             Timer timer_10ms = new Timer();
-            timer_100ms.Interval = 10;
+            timer_100ms.Interval = 200;
             timer_100ms.Tick += Timer_CaptureScreen;
             timer_100ms.Start();
         }
@@ -97,7 +103,8 @@ namespace Tool_Test_Ontrak_Pannel
             // Detect frequency
             if (mStatusConnectOsci)
             {
-                pDataProcessing.CaptureScreen();
+                //pDataProcessing.CaptureScreen();
+                phantek.CollectData();
             }
             else
             {
@@ -296,7 +303,7 @@ namespace Tool_Test_Ontrak_Pannel
             pPcbBase03.pVolt3   = mSerialDicData[sPcbBaseKey[0]];
             pPcbBase03.pVolt5   = mSerialDicData[sPcbBaseKey[1]];
             pPcbBase03.pCurrent = mSerialDicData[sPcbBaseKey[2]];
-            pPcbBase03.pFreqMHz = pDataProcessing.mFreqCh1;
+            pPcbBase03.pFreqMHz.mValue = phantek.GetFreqCH1();
             pPcbBase03.pFreqKHz = pDataProcessing.mFreqCh2;
 
             pPcbSync08.pVolt3   = mSerialDicData[sPcbSyncKey[0]];
@@ -310,21 +317,21 @@ namespace Tool_Test_Ontrak_Pannel
             pPcbEtag06.pCurTrasMode   = mSerialDicData[sPcbEtagKey[2]];
 
             // show value + Unit
-            tboBaseVolt3.Text   = pPcbBase03.pVolt3.mValue.ToString("F4") + " " +  pPcbBase03.pVolt3.mUnit;
-            tboBaseVolt5.Text   = pPcbBase03.pVolt5.mValue.ToString("F4") + " " + pPcbBase03.pVolt5.mUnit;
-            tboBaseCurrent.Text = pPcbBase03.pCurrent.mValue.ToString("F4") + " " + pPcbBase03.pCurrent.mUnit;
-            tboBaseSyncMHz.Text = pPcbBase03.pFreqMHz.mValue.ToString("F4") + " " + pPcbBase03.pFreqMHz.mUnit;
-            tboBaseSyncKHz.Text = pPcbBase03.pFreqKHz.mValue.ToString("F4") + " " + pPcbBase03.pFreqKHz.mUnit;
+            tboBaseVolt3.Text   = pPcbBase03.pVolt3.mValue.ToString("F2") + " " +  pPcbBase03.pVolt3.mUnit;
+            tboBaseVolt5.Text   = pPcbBase03.pVolt5.mValue.ToString("F2") + " " + pPcbBase03.pVolt5.mUnit;
+            tboBaseCurrent.Text = pPcbBase03.pCurrent.mValue.ToString("F2") + " " + pPcbBase03.pCurrent.mUnit;
+            tboBaseSyncMHz.Text = pPcbBase03.pFreqMHz.mValue.ToString("F2") + " " + pPcbBase03.pFreqMHz.mUnit;
+            tboBaseSyncKHz.Text = pPcbBase03.pFreqKHz.mValue.ToString("F2") + " " + pPcbBase03.pFreqKHz.mUnit;
 
-            tboSyncVolt3.Text   = pPcbSync08.pVolt3.mValue.ToString("F4") + " " + pPcbSync08.pVolt3.mUnit;
-            tboSyncVolt5.Text   = pPcbSync08.pVolt5.mValue.ToString("F4") + " " + pPcbSync08.pVolt5.mUnit;
-            tboSyncVolt48.Text  = pPcbSync08.pVolt48.mValue.ToString("F4") + " " + pPcbSync08.pVolt48.mUnit;
-            tboSyncMHz.Text     = pPcbSync08.pFreqMHz.mValue.ToString("F4") + " " + pPcbSync08.pFreqMHz.mUnit;
-            tboSyncKHz.Text     = pPcbSync08.pFreqKHz.mValue.ToString("F4") + " " + pPcbSync08.pFreqKHz.mUnit;
+            tboSyncVolt3.Text   = pPcbSync08.pVolt3.mValue.ToString("F2") + " " + pPcbSync08.pVolt3.mUnit;
+            tboSyncVolt5.Text   = pPcbSync08.pVolt5.mValue.ToString("F2") + " " + pPcbSync08.pVolt5.mUnit;
+            tboSyncVolt48.Text  = pPcbSync08.pVolt48.mValue.ToString("F2") + " " + pPcbSync08.pVolt48.mUnit;
+            tboSyncMHz.Text     = pPcbSync08.pFreqMHz.mValue.ToString("F2") + " " + pPcbSync08.pFreqMHz.mUnit;
+            tboSyncKHz.Text     = pPcbSync08.pFreqKHz.mValue.ToString("F2") + " " + pPcbSync08.pFreqKHz.mUnit;
 
-            tboEtagVolt3.Text       = pPcbEtag06.pVolt3.mValue.ToString("F4") + " " + pPcbEtag06.pVolt3.mUnit;
-            tboEtagCurSleep.Text    = pPcbEtag06.pCurSleepMode.mValue.ToString("F4") + " " + pPcbEtag06.pCurSleepMode.mUnit;
-            tboEtagCurTrans.Text    = pPcbEtag06.pCurTrasMode.mValue.ToString("F4") + " " + pPcbEtag06.pCurTrasMode.mUnit;
+            tboEtagVolt3.Text       = pPcbEtag06.pVolt3.mValue.ToString("F2") + " " + pPcbEtag06.pVolt3.mUnit;
+            tboEtagCurSleep.Text    = pPcbEtag06.pCurSleepMode.mValue.ToString("F2") + " " + pPcbEtag06.pCurSleepMode.mUnit;
+            tboEtagCurTrans.Text    = pPcbEtag06.pCurTrasMode.mValue.ToString("F2") + " " + pPcbEtag06.pCurTrasMode.mUnit;
 
             pDataProcessing.UpdateLable(lbBaseVolt3, pPcbBase03.pVolt3.mStatus);
             pDataProcessing.UpdateLable(lbBaseVolt5, pPcbBase03.pVolt5.mStatus);
@@ -346,6 +353,7 @@ namespace Tool_Test_Ontrak_Pannel
         private void btOpenHantek_Click(object sender, EventArgs e)
         {
             //pDataProcessing.OpenOscilloscope();
+            phantek.InitHantek();
             mStatusConnectOsci = true;
             btCloseOsci.ForeColor = Color.Black;
             btOpenOsci.ForeColor = Color.Green;
@@ -354,9 +362,15 @@ namespace Tool_Test_Ontrak_Pannel
         private void btCloseOsci_Click(object sender, EventArgs e)
         {
             //pDataProcessing.CloseOscilloscope();
+            phantek.TurnOffHantel();
             mStatusConnectOsci = false;
             btCloseOsci.ForeColor = Color.Red;
             btOpenOsci.ForeColor = Color.Black;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

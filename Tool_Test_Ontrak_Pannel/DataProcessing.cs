@@ -19,7 +19,7 @@ namespace Tool_Test_Ontrak_Pannel
         Process mAppHantek;
         KalmanFilter pKalman;
         readonly double FreqMhzMin = 38.39;
-        readonly double FreqMhzMax = 38.43;
+        readonly double FreqMhzMax = 38.44;
         readonly double FreqKhzMin = 1.99;
         readonly double FreqKhzMax = 2.10;
         //private extern PcbBase pPcbBase03;
@@ -43,7 +43,7 @@ namespace Tool_Test_Ontrak_Pannel
         double mFreqRawCH4;
         public DataProcessing()
         {
-            pKalman = new KalmanFilter(initialValue: 0, initialCovariance: 1, processVariance: 0.1, measurementVariance: 0.5);
+            pKalman = new KalmanFilter(initialValue: 38.4, initialCovariance: 1, processVariance: 0.05, measurementVariance: 0.9);
             mFreqCh1 = new DataStructure();
             mFreqCh2 = new DataStructure();
             mFreqCh3 = new DataStructure();
@@ -114,36 +114,78 @@ namespace Tool_Test_Ontrak_Pannel
                     //Console.WriteLine("Chuỗi hợp lệ. Giá trị số: " + number);
                     tmpfreq = double.Parse(temp);
                     string unit = match.Groups["unit"].Value;
+                    //double tmpFreqKalMan = 0;
                     //mFrequencyRaw[channel] = (freq, unit);
                     switch (channel)
                     {
                         case "1":
 
-                            mFreqRawCH1 = tmpfreq;
+                            //mFreqRawCH1 = tmpfreq;
                             mFreqCh1.mUnit = unit;
+                            double tmpFreqKalMan = pKalman.Update(tmpfreq);
+                            double tmpFreqAver = pKalman.Filter(tmpFreqKalMan);
+                            mFreqCh1.mValue = tmpFreqAver;
+                            if (mFreqCh1.mValue < FreqMhzMax && mFreqCh1.mValue > FreqMhzMin)
+                            {
+                                mFreqCh1.mStatus = true;
+                            }
+                            else
+                            {
+                                mFreqCh1.mStatus = false;
+                            }
                             break;
 
                         case "2":
-                            mFreqRawCH2 = tmpfreq;
+                            //mFreqRawCH2 = tmpfreq;
                             mFreqCh2.mUnit = unit;
-
+                            double tmpFreqKalManch2 = pKalman.Update(tmpfreq);
+                            double tmpFreqAverch2 = pKalman.Filter(tmpFreqKalManch2);
+                            mFreqCh2.mValue = tmpFreqAverch2;
+                            if (mFreqCh2.mValue < FreqKhzMax && mFreqCh2.mValue > FreqKhzMin)
+                            {
+                                mFreqCh2.mStatus = true;
+                            }
+                            else
+                            {
+                                mFreqCh2.mStatus = false;
+                            }
                             break;
                         case "3":
                             mFreqRawCH3 = tmpfreq;
                             mFreqCh3.mUnit = unit;
-
+                            double tmpFreqKalManch3 = pKalman.Update(tmpfreq);
+                            double tmpFreqAverch3 = pKalman.Filter(tmpFreqKalManch3);
+                            mFreqCh3.mValue = tmpFreqAverch3;
+                            if (mFreqCh3.mValue < FreqMhzMax && mFreqCh3.mValue > FreqMhzMin)
+                            {
+                                mFreqCh3.mStatus = true;
+                            }
+                            else
+                            {
+                                mFreqCh3.mStatus = false;
+                            }
                             break;
                         case "4":
                             mFreqRawCH4 = tmpfreq;
                             mFreqCh4.mUnit = unit;
-
+                            double tmpFreqKalManch4 = pKalman.Update(tmpfreq);
+                            double tmpFreqAverch4 = pKalman.Filter(tmpFreqKalManch4);
+                            mFreqCh4.mValue = tmpFreqAverch4;
+                            if (mFreqCh4.mValue < FreqKhzMax && mFreqCh4.mValue > FreqKhzMin)
+                            {
+                                mFreqCh4.mStatus = true;
+                            }
+                            else
+                            {
+                                mFreqCh4.mStatus = false;
+                            }
                             break;
                         default:
                             break;
                     }    
                 }
             }
-            FreqKalman();
+            //FreqKalman();
             return status;
         }
 
@@ -194,50 +236,14 @@ namespace Tool_Test_Ontrak_Pannel
 
         private void FreqKalman()
         {
-            mFreqCh1.mValue = pKalman.Update(mFreqRawCH1);
-            mFreqCh2.mValue = pKalman.Update(mFreqRawCH2);
-            mFreqCh3.mValue = pKalman.Update(mFreqRawCH3);
-            mFreqCh4.mValue = pKalman.Update(mFreqRawCH4);
+            
+            //mFreqCh2.mValue = pKalman.Update(mFreqRawCH2);
+            //mFreqCh3.mValue = pKalman.Update(mFreqRawCH3);
+            //mFreqCh4.mValue = pKalman.Update(mFreqRawCH4);
             //mFreqCh1.mValue = (mFreqRawCH1);
             //mFreqCh2.mValue = (mFreqRawCH2);
             //mFreqCh3.mValue = (mFreqRawCH3);
-            //mFreqCh4.mValue = (mFreqRawCH4);
-
-            if (mFreqCh1.mValue > 0.9 && mFreqCh1.mValue < 1.1)
-            {
-                mFreqCh1.mStatus = true;
-            }
-            else
-            {
-                mFreqCh1.mStatus = false;
-            }
-
-            if (mFreqCh2.mValue < FreqKhzMax && mFreqCh2.mValue > FreqKhzMin)
-            {
-                mFreqCh2.mStatus = true;
-            }
-            else
-            {
-                mFreqCh2.mStatus = false;
-            }
-
-            if (mFreqCh3.mValue < FreqMhzMax && mFreqCh3.mValue > FreqMhzMin)
-            {
-                mFreqCh3.mStatus = true;
-            }
-            else
-            {
-                mFreqCh3.mStatus = false;
-            }
-
-            if (mFreqCh4.mValue < FreqKhzMax && mFreqCh4.mValue > FreqKhzMin)
-            {
-                mFreqCh4.mStatus = true;
-            }
-            else
-            {
-                mFreqCh4.mStatus = false;
-            }
+            //mFreqCh4.mValue = (mFreqRawCH4);            
         }
     }
 }

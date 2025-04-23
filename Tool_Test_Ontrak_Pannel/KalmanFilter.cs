@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Tool_Test_Ontrak_Pannel
 {
@@ -13,12 +15,18 @@ namespace Tool_Test_Ontrak_Pannel
         private double Q;  // Phương sai của quá trình (process noise)
         private double R;  // Phương sai của phép đo (measurement noise)
 
+        private readonly int windowSize;
+        private readonly Queue<double> samples;
+
         public KalmanFilter(double initialValue, double initialCovariance, double processVariance, double measurementVariance)
         {
             x = initialValue;
             P = initialCovariance;
             Q = processVariance;
             R = measurementVariance;
+
+            this.windowSize = 1000;
+            samples = new Queue<double>(windowSize);
         }
 
         /// <summary>
@@ -38,6 +46,19 @@ namespace Tool_Test_Ontrak_Pannel
             P = (1 - K) * P;           // Cập nhật sai số ước lượng
 
             return x;
+        }
+
+        public double Filter(double newSample)
+        {
+            // Thêm mẫu mới vào queue
+            samples.Enqueue(newSample);
+
+            // Nếu số mẫu vượt quá kích thước cửa sổ, loại bỏ mẫu cũ nhất
+            if (samples.Count > windowSize)
+                samples.Dequeue();
+
+            // Tính trung bình của các mẫu hiện có
+            return samples.Average();
         }
     }
 }
